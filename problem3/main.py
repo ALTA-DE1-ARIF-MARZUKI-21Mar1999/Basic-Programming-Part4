@@ -1,6 +1,13 @@
 def cetak_table_perkalian(number):
     pattern = ""
+    for i in range(1, number + 1):
+        for j in range(1, number + 1):
+            pattern += ' ' + str(i * j)
+        pattern += "\n"
     return pattern
+
+hasil = cetak_table_perkalian(9)
+print(hasil)
 
 if __name__ == '__main__':
     cetak_table_perkalian(9)

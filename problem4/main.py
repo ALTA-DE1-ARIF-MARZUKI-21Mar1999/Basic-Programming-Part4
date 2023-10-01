@@ -1,5 +1,13 @@
 def ubah_huruf(sentence):
     pattern = ""
+    for karakter in sentence:
+        if 'A' <= karakter <= 'Z':
+            huruf = ord(karakter) - ord('A')
+            huruf_baru = (huruf + 10) % 26
+            karakter_baru = chr(ord('A') + huruf_baru)
+        else:
+            karakter_baru = karakter
+        pattern += karakter_baru
     return pattern
 
 if __name__ == '__main__':
